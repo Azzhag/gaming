@@ -1,0 +1,21 @@
+{
+  "name": "Pinball-Lizard_Proxy-Router",
+  "version": "1.0.0",
+  "description": "Primary endpoint and proxy handler for Pinball Lizard.",
+  "main": "boot.js",
+  "scripts": {
+    "start": "node boot.js"
+  },
+  "author": "Microsoft Corporation",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "bottleneck": "^2.0.1",
+    "dateformat": "^3.0.2",
+    "dnscache": "^1.0.1",
+    "express": "^4.16.2",
+    "jsonschema": "^1.2.2",
+    "lodash": "^4.17.4",
+    "ws": "^3.3.2"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "",
+    "NODE_TLS_REJECT_UNAUTHORIZED": "0",
+    "AzureWebJobsDocumentDBConnectionString": "",
+    "INTERNAL_RELAY_IP":"127.0.0.1",
+    "INTERNAL_RELAY_PORT":"9125",
+    "INTERNAL_RELAY_AUTH_TOKEN":"",
+    "INTERNAL_RELAY_ALLOWED_HOSTS":"",
+    "ROUTER_IP":"127.0.0.1",
+    "ROUTER_WS_PORT":"8085",
+    "ROUTER_PORT":"9010",
+    "ROUTER_AUTH_TOKEN":"",
+    "MIXER_HANDLER_TOKEN":"",
+    "MIXER_HANDLER_IP":"127.0.0.1",
+    "MIXER_HANDLER_PORT":"9110",
+    "MIXER_CHANNEL_TOKEN":"",
+    "MIXER_CHANNEL_VERSION_ID":"",
+    "APP_GATEWAY_IP":"",
+    "PLAYFAB_HANDLER_IP":"127.0.0.1",
+    "PLAYFAB_HANDLER_PORT":"9111",
+    "PLAYFAB_HANDLER_TOKEN":"",
+    "PLAYFAB_API_TITLE_ID":"",
+    "PLAYFAB_API_SECRET":"",
+    "CONFIG_ENDPOINT_URI":"",
+    "CONFIG_ENDPOINT_KEY":"",
+    "COMMANDER_PORT":"9221",
+    "COMMANDER_IP":"",
+    "COMMANDER_TOKEN":"",
+    "COMMANDER_NUMBER_OF_FORMATIONS":12,
+    "COMMANDER_FORMATION_SIZE":6,
+    "ROUTER_FUNCTION_ENDPOINT":"https://localhost:7071/api",
+    "ROUTER_FUNCTION_KEY":""
+  },
+  "Host": {
+    "LocalHttpPort": 7071,
+    "CORS": "*"
+  }
+}

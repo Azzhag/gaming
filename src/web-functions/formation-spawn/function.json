@@ -1,0 +1,48 @@
+{
+  "disabled": false,
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "route": "formation/spawn/{type}/{instance}/",
+      "methods": [
+        "post"
+      ]
+    },
+    {
+      "name": "instanceIn",
+      "type": "documentDB",
+      "direction": "in",
+      "databaseName": "VR-Game",
+      "collectionName": "session",
+      "sqlQuery": "select c.instance, c.playerName from c where c.instance = {instance} and c.active = true",
+      "createIfNotExists": true,
+      "connectionStringSettings": "AzureWebJobsDocumentDBConnectionString"
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "name": "npcs",
+      "type": "documentDB",
+      "direction": "out",
+      "databaseName": "VR-Game",
+      "collectionName": "npc",
+      "createIfNotExists": true,
+      "connectionStringSettings": "AzureWebJobsDocumentDBConnectionString"
+    },
+    {
+      "name": "formation",
+      "type": "documentDB",
+      "direction": "out",
+      "databaseName": "VR-Game",
+      "collectionName": "formation",
+      "createIfNotExists": true,
+      "connectionStringSettings": "AzureWebJobsDocumentDBConnectionString"
+    }
+  ]
+}

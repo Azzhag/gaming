@@ -1,0 +1,16 @@
+{
+  "name": "Pinball-Lizard_Internal-Relay",
+  "version": "1.0.0",
+  "description": "Message relay service for Pinball Lizard.",
+  "main": "boot.js",
+  "scripts": {
+    "start": "node boot.js"
+  },
+  "author": "Microsoft Corporation",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "jsonschema": "^1.2.2"
+  }
+}

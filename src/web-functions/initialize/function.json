@@ -1,0 +1,29 @@
+{
+  "disabled": false,
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "route": "initialize",
+      "name": "req",
+      "methods": [
+        "get", "post"
+      ]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "name": "instance",
+      "type": "documentDB",
+      "direction": "out",
+      "databaseName": "VR-Game",
+      "collectionName": "session",
+      "createIfNotExists": true,
+      "connectionStringSettings": "AzureWebJobsDocumentDBConnectionString"
+    }
+  ]
+}

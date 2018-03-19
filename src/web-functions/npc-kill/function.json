@@ -1,0 +1,65 @@
+{
+  "disabled": false,
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "route": "npc/die/{instance}/{formation}/{id}",
+      "methods": [
+        "post"
+      ]
+    },
+    {
+      "name": "instanceIn",
+      "type": "documentDB",
+      "direction": "in",
+      "databaseName": "VR-Game",
+      "collectionName": "session",
+      "sqlQuery": "select * from c where c.instance={instance} and c.active=true",
+      "connectionStringSettings": "AzureWebJobsDocumentDBConnectionString"
+    },
+    {
+      "name": "npcIn",
+      "type": "documentDB",
+      "direction": "in",
+      "databaseName": "VR-Game",
+      "collectionName": "npc",
+      "sqlQuery": "select * from c where c.npcId={id}",
+      "connectionStringSettings": "AzureWebJobsDocumentDBConnectionString"
+    },
+    {
+      "name": "formationIn",
+      "type": "documentDB",
+      "direction": "in",
+      "databaseName": "VR-Game",
+      "collectionName": "formation",
+      "sqlQuery": "select * from c where c.formationId={formation} and c.instance={instance}",
+      "connectionStringSettings": "AzureWebJobsDocumentDBConnectionString"
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "name": "npcOut",
+      "type": "documentDB",
+      "direction": "out",
+      "databaseName": "VR-Game",
+      "collectionName": "npc",
+      "createIfNotExists": true,
+      "connectionStringSettings": "AzureWebJobsDocumentDBConnectionString"
+    },
+    {
+      "name": "formationOut",
+      "type": "documentDB",
+      "direction": "out",
+      "databaseName": "VR-Game",
+      "collectionName": "formation",
+      "createIfNotExists": true,
+      "connectionStringSettings": "AzureWebJobsDocumentDBConnectionString"
+    }
+  ]
+}

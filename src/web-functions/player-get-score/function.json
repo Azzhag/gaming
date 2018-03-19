@@ -1,0 +1,30 @@
+{
+  "disabled": false,
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "route": "player/getscore/{instance}",
+      "methods": [
+        "post"
+      ]
+    },
+    {
+      "name": "instanceIn",
+      "type": "documentDB",
+      "direction": "in",
+      "databaseName": "VR-Game",
+      "collectionName": "session",
+      "sqlQuery": "select c.playerScore from c where c.instance = {instance} and c.active=true",
+      "createIfNotExists": true,
+      "connectionStringSettings": "AzureWebJobsDocumentDBConnectionString"
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    }
+  ]
+}

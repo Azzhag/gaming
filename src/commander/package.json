@@ -1,0 +1,18 @@
+{
+  "name": "Pinball-Lizard_Commander",
+  "version": "1.0.0",
+  "description": "Commander service for Pinball Lizard.",
+  "main": "boot.js",
+  "scripts": {
+    "start": "node boot.js"
+  },
+  "author": "Microsoft Corporation",
+  "license": "MIT",
+  "dependencies": {
+    "beam-interactive-node2": "^2.4.0",
+    "dateformat": "^3.0.3",
+    "express": "^4.16.2",
+    "lodash": "^4.17.4",
+    "uuid": "^3.2.1"
+  }
+}

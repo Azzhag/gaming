@@ -1,0 +1,31 @@
+{
+  "id":"/MessageSchema",
+  "type":"object",
+  "properties":{
+    "auth":{
+      "type":"object",
+      "properties":{
+        "key":{ "type":"string" }
+      },
+      "required":["key"]
+    },
+    "instance":{
+      "type":"string"
+    },
+    "type":{
+      "type":"integer"
+    },
+    "spec":{
+      "type":"integer"
+    },
+    "action":{
+      "type":"integer"
+    },
+    "payload":{
+      "type":"object"
+    }
+  },
+  "required":[
+    "instance", "auth", "type", "action", "spec", "payload"
+  ]
+}

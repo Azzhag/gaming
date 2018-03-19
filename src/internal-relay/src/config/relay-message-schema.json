@@ -1,0 +1,29 @@
+{
+  "id":"/MessageSchema",
+  "type":"object",
+  "properties":{
+    "ordered":{
+      "type":"boolean"
+    },
+    "headers":{
+      "type":"object"
+    },
+    "method":{
+      "type":"string"
+    },
+    "relays":{
+      "type":"array",
+      "properties":{
+        "uri":{
+          "type":"string"
+        },
+        "payload":{
+          "type":"object"
+        }
+      }
+    }
+  },
+  "required":[
+    "ordered", "relays"
+  ]
+}

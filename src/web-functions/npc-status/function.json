@@ -1,0 +1,39 @@
+{
+  "disabled": false,
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "route": "npc/status/{instance}/{id}",
+      "methods": [
+        "post"
+      ]
+    },
+    {
+      "name": "instanceIn",
+      "type": "documentDB",
+      "direction": "in",
+      "databaseName": "VR-Game",
+      "collectionName": "session",
+      "sqlQuery": "select c.instance from c where c.instance = {instance} and c.active=true",
+      "createIfNotExists": true,
+      "connectionStringSettings": "AzureWebJobsDocumentDBConnectionString"
+    },
+    {
+      "name": "npcIn",
+      "type": "documentDB",
+      "direction": "in",
+      "databaseName": "VR-Game",
+      "collectionName": "npc",
+      "sqlQuery": "select * from c where c.npcId={id} and c.instance={instance}",
+      "connectionStringSettings": "AzureWebJobsDocumentDBConnectionString"
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    }
+  ]
+}
